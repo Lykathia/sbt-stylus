@@ -1,7 +1,6 @@
 sbtPlugin := true
 
 organization := "com.typesafe.sbt"
-
 name := "sbt-stylus"
 
 scalaVersion := "2.10.5"
@@ -26,10 +25,10 @@ addSbtPlugin("com.typesafe.sbt" %% "sbt-js-engine" % "1.1.1")
 
 publishMavenStyle := false
 
-publishTo := {
-  if (isSnapshot.value) Some(Classpaths.sbtPluginSnapshots)
-  else Some(Classpaths.sbtPluginReleases)
-}
+licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html"))
+
+bintrayOrganization := Some("pitchplay")
+bintrayPackageLabels := Seq("sbt", "stylus")
 
 scriptedSettings
 
